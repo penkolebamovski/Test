@@ -64,13 +64,16 @@ public class Store {
     }
 
     public double profit() {
-
         double total = 0.0;
-        for(int i=0; i<orderList.size(); i++) {
-            OrderProduct ordered = orderList.get(i);
+        double profit = 0.0;
+        for (int i = 0; i < orderList.size(); i++) {
+            OrderProduct orderProduct = orderList.get(i);
 
-            total = (ordered.sellPrice - ordered.deliverPrice )* ordered.quantity;
+            profit = (orderProduct.sellPrice-orderProduct.deliverPrice)*orderProduct.quantity;
+
+            total+= profit;
         }
-        return total;
+        return profit;
     }
+
 }
