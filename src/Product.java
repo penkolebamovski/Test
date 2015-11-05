@@ -5,9 +5,9 @@ public class Product {
 
     private String name;
 
-    public double price;
+    public int price;
 
-    public Product(String name, double price) {
+    public Product(String name, int price) {
 
         this.name = name;
 
